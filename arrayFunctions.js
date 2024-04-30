@@ -131,19 +131,27 @@ console.log(fruits)
  * - Use number method .indexOf()
  * - Use string method .slice()
  */
-let shout = "Salman!!!!!!!"
+let shout = "Salman"
 
 function youGottaCalmDown(shout) {
   // Your code here
   let characterArray = shout.split("");
-
   let i =  characterArray.indexOf("!");
 
-  characterArray = characterArray.slice(0,i);
-
-  let x = characterArray.join("");
+  if(i == -1){
   
-  return x
+       let x = characterArray.join("");
+  
+     return x
+  }else if(!!(i)== true){
+
+       characterArray = characterArray.slice(0,i);
+       characterArray.push("!");
+       let x = characterArray.join("");
+  
+     return x
+  } 
+  
 }
 
 console.log(youGottaCalmDown(shout));
